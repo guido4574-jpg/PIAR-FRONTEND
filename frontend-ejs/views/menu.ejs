@@ -1,0 +1,20 @@
+<%- include("partials/header", { title }) %>
+
+<section class="page-heading">
+  <h1>Menu principal</h1>
+  <p>Sesion activa: <strong><%= usuario && (usuario.correo || usuario.email || usuario.nombre) ? (usuario.correo || usuario.email || usuario.nombre) : "Usuario autenticado" %></strong></p>
+</section>
+
+<section class="menu-grid">
+  <a class="menu-card" href="/usuarios">
+    <h2>Listar usuarios</h2>
+    <p>Consulta los usuarios registrados desde el backend protegido con JWT.</p>
+  </a>
+
+  <a class="menu-card" href="/usuarios/crear">
+    <h2>Crear usuario</h2>
+    <p>Registra un nuevo usuario consumiendo el endpoint POST /usuarios.</p>
+  </a>
+</section>
+
+<%- include("partials/footer") %>
