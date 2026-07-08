@@ -1,22 +1,17 @@
 window.PIAR_API_CONFIG = {
-    mode: "external",
-    adapter: "jsonplaceholderUsers",
+    mode: "local",
+    adapter: "piar",
 
-    // API publica temporal para pruebas con Fetch API.
-    baseUrl: "https://jsonplaceholder.typicode.com",
+    baseUrl: "http://localhost:8080",
 
-    // Si tu API usa token, pegalo aqui.
-    // Ejemplo: "Bearer eyJ..."
     token: "",
 
     endpoints: {
-        data: "/users",
-        reset: "/reset",
-        health: "/health"
+        data: "/api/data",
+        reset: "/api/reset",
+        health: "/api/health"
     },
 
-    // Para APIs tipo JSONBin que envuelven la respuesta en una propiedad.
-    // Ejemplo: responseDataPath: "record"
     responseDataPath: "",
 
     headers: {}

@@ -5,8 +5,7 @@ function getApiBaseUrl() {
     if (API_CONFIG.mode === "external" && API_CONFIG.baseUrl) {
         return API_CONFIG.baseUrl.replace(/\/$/, "");
     }
-
-    return `${window.location.origin}/api`;
+    return API_CONFIG.baseUrl; 
 }
 
 function apiUrl(name) {
